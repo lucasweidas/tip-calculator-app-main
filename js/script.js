@@ -30,7 +30,7 @@
     }
 
     function getValues() {
-        billValue = inputBill.value;
+        billValue = inputBill.value.replace(',', '.');
         peopleValue = inputPeoples.value;
         const button = checkBtnTip();
         if (button !== false) {
@@ -39,7 +39,7 @@
             return;
         }
         isTipEmpty();
-        tipValue = inputTip.value;
+        tipValue = inputTip.value.replace(',', '.');
     }
 
     function checkActive() {
@@ -51,9 +51,10 @@
             peopleValue.length === 0
         ) {
             btnReset.classList.remove('active');
-            return;
+            return false;
         }
         btnReset.classList.add('active');
+        return true;
     }
 
     function checkSelected(button) {
@@ -151,10 +152,9 @@
     const totalPerson = document.querySelector('.total-person');
     const btnReset = document.querySelector('.btn-reset');
 
-    // setInputFilter(inputBill, value => /^-?\d*[.,]?\d{0,2}$/.test(value));
-    setInputFilter(inputBill, value => /^-?\d*[.]?\d{0,2}$/.test(value));
+    setInputFilter(inputBill, value => /^-?\d*[.,]?\d{0,2}$/.test(value));
 
-    setInputFilter(inputTip, value => /^\d*[.]?\d{0,2}$/.test(value));
+    setInputFilter(inputTip, value => /^\d*[.,]?\d{0,2}$/.test(value));
 
     setInputFilter(inputPeoples, value => /^\d*$/.test(value));
 
@@ -194,6 +194,6 @@
     });
 
     btnReset.addEventListener('click', () => {
-        reset();
+        if (checkActive()) reset();
     });
 })();
