@@ -38,8 +38,8 @@
             isTipEmpty();
             return;
         }
-        isTipEmpty();
         tipValue = inputTip.value.replace(',', '.');
+        isTipEmpty();
     }
 
     function checkActive() {
@@ -96,11 +96,11 @@
     }
 
     function isTipEmpty() {
-        if (tipValue === '0') {
-            document.querySelector('.tip-section').classList.add('really');
+        if (Number(tipValue) > 0 || tipValue.length === 0) {
+            document.querySelector('.tip-section').classList.remove('really');
             return;
         }
-        document.querySelector('.tip-section').classList.remove('really');
+        document.querySelector('.tip-section').classList.add('really');
     }
 
     function isEmpty() {
