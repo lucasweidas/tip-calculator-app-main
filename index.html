@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <img id="logo-img" src="images/logo.svg" alt="Splitter logo">
+
+  <main class="main-c">
+    <h1 class="sr-only">Tip Calculator</h1>
+
+    <div class="form-c">
+      <section>
+        <h2>Bill</h2>
+        <div class="input-bill input-c">          
+          <input type="text" id="bill" placeholder="0">
+        </div>
+      </section>
+
+      <section class="tip-section">
+        <h2>Select Tip %</h2>
+        <div class="tip-options">
+          <button class="btn-tip btn-c">5%</button>
+          <button class="btn-tip btn-c">10%</button>
+          <button class="btn-tip btn-c">15%</button>
+          <button class="btn-tip btn-c">25%</button>
+          <button class="btn-tip btn-c">50%</button>          
+          <input type="text" id="tip" placeholder="Custom">
+        </div>
+      </section>
+
+      <section class="num-peoples-c">
+        <h2>Number of People</h2>
+        <div class="input-peoples input-c">          
+          <input type="text" id="peoples" placeholder="0">
+        </div>
+      </section>
+    </div>
+
+    <div class="result-c">
+      <div class="calc-c">
+        <p class="calc-txt">Tip Amount <span>/ person</span></p>
+        <p class="calc-res tip-person">$0.00</p>
+      </div>
+      <div class="calc-c">
+        <p class="calc-txt">Total <span>/ person</span></p>
+        <p class="calc-res total-person">$0.00</p>
+      </div>
+      <button class="btn-reset btn-c">Reset</button>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer noopener">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/LucasWeidas" target="_blank">Lucas Weidas</a>.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
