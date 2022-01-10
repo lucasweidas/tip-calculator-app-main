@@ -151,9 +151,10 @@
     const totalPerson = document.querySelector('.total-person');
     const btnReset = document.querySelector('.btn-reset');
 
-    setInputFilter(inputBill, value => /^-?\d*[.,]?\d{0,2}$/.test(value));
+    // setInputFilter(inputBill, value => /^-?\d*[.,]?\d{0,2}$/.test(value));
+    setInputFilter(inputBill, value => /^-?\d*[.]?\d{0,2}$/.test(value));
 
-    setInputFilter(inputTip, value => /^\d*[.,]?\d{0,2}$/.test(value));
+    setInputFilter(inputTip, value => /^\d*[.]?\d{0,2}$/.test(value));
 
     setInputFilter(inputPeoples, value => /^\d*$/.test(value));
 
