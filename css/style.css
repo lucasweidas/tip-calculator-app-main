@@ -12,9 +12,10 @@
     --clr-dark-cyan: hsl(186, 14%, 43%);
     --clr-dark-light-cyan: hsl(184, 19%, 68%);
     --clr-light-dark-cyan: hsl(185, 41%, 84%);
-    --clr-light-cyan: hsl(189, 41%, 97%);
+    --clr-light-cyan: hsl(202, 80%, 97%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-hover: hsl(173, 61%, 77%);
+    --clr-red: hsl(7, 100%, 63%);
 
     --font-space-mono: 'Space Mono', monospace;
     --font-size: 24px;
@@ -76,19 +77,11 @@ body {
     color: var(--clr-very-dark-cyan);
     text-align: end;
     border-radius: 5px;
-    box-shadow: 0 0 1px rgba(0, 73, 77, 0.2);
     padding: 0.313rem 1.125rem 0.313rem 3rem;
-    appearance: textfield;
-    -moz-appearance: textfield;
 }
 
 .form-c input::placeholder {
     color: var(--clr-dark-light-cyan);
-}
-
-.form-c input::-webkit-outer-spin-button,
-.form-c input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
 }
 
 .form-c input:focus {
@@ -117,7 +110,7 @@ body {
 
 .tip-section::after {
     content: 'Really?';
-    color: #ff5a44;
+    color: var(--clr-red);
     position: absolute;
     top: 0;
     right: 0;
@@ -172,7 +165,7 @@ body {
 
 .num-peoples-c::after {
     content: "Can't be zero";
-    color: #ff5a44;
+    color: var(--clr-red);
     position: absolute;
     top: 0;
     right: 0;
@@ -188,7 +181,7 @@ body {
 }
 
 #peoples.invalid {
-    outline: 2px solid #ff5a44;
+    outline: 2px solid var(--clr-red);
 }
 
 /* Result Container */
