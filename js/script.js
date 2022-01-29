@@ -1,6 +1,6 @@
 (() => {
     function setInputFilter(textbox, inputFilter) {
-        // This filter function is created by emkey08 "https://jsfiddle.net/emkey08/zgvtjc51";
+        // This filter function is created by emkey08 "https://jsfiddle.net/emkey08/zgvtjc51"
         [
             'input',
             'keydown',
